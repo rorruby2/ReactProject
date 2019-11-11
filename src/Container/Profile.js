@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import SideMenu from './SideMenu';
 import Avatar from 'react-avatar-edit';
-import { Grid, Cell } from 'react-mdl';
+// import { Grid, Cell } from 'react-mdl';
 
 class Profile extends React.Component {
 
@@ -16,6 +16,11 @@ class Profile extends React.Component {
     this.onCrop = this.onCrop.bind(this)
     this.onClose = this.onClose.bind(this)
     this.onBeforeFileLoad = this.onBeforeFileLoad.bind(this)
+    console.log("=========Constructor===============")
+  }
+
+  componentDidMount(){
+    console.log("=========DidMount===============")
   }
   
   onClose() {
@@ -44,7 +49,7 @@ class Profile extends React.Component {
   setEditorRef = (editor) => this.editor = editor
 
   render() {
-    console.log("Preview =>", this.state.preview)
+    console.log("render =>", this.state.preview)
     return (
       <div id="app">
         <Header history={this.props.history}/>

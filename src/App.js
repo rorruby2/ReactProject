@@ -8,6 +8,8 @@ import User from './Container/User';
 import Movie from './Container/MovieList';
 import AddUser from './Form/AddUser';
 import Profile from './Container/Profile';
+import ImageSearch from './Container/ImageSearch';
+import VideoSearch from './Container/VideoSearch';
 import { createStore,applyMiddleware } from 'redux';
 import RootReducer from "./store/reducer/index";
 import thunk from 'redux-thunk';
@@ -32,6 +34,8 @@ class App extends Component {
             <PrivateRoute path={"/movie"} component={Movie} />
             <PrivateRoute path={"/memeGenerator"} component={MemeGenerator} />
             <PrivateRoute path={"/newUser"} component={AddUser} />
+            <PrivateRoute path={"/imageSearch"} component={ImageSearch} />
+            <PrivateRoute path={"/videoSearch"} component={VideoSearch} />
           </Switch>
         </Router>
       </Provider>

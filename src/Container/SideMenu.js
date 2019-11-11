@@ -22,6 +22,16 @@ class Sidebar extends Component {
                 <span className="icon"><i className="fa fa-picture-o"></i></span> MemeGenerator
               </Link>
             </li>
+            <li>
+              <Link to="/imageSearch" className = {(currentLocation === '/search' ? 'is-active' : '')}>
+                <span className="icon"><i className="fa fa-picture-o"></i></span> ImageSearch
+              </Link>
+            </li>
+            <li>
+              <Link to="/videoSearch" className = {(currentLocation === '/search' ? 'is-active' : '')}>
+                <span className="icon"><i className="fa fa-picture-o"></i></span> VideoSearch
+              </Link>
+            </li>
           </ul>
         </aside>
     );
